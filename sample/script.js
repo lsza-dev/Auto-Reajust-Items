@@ -1,3 +1,18 @@
+resizeBoxes();
+
+addEventListener("resize", resizeBoxes);
+
+function resizeBoxes() {
+    const parent = document.querySelector(".flex-div");
+    const parentContainer = parent.parentElement;
+    const childs = parent.children;
+    const n = childs.length;
+    const w = parentContainer.offsetWidth;
+    const h = parentContainer.offsetHeight;
+    const side = getItemSize(w,h,n,250,500);
+    Array.from(childs).forEach(el => el.style.width = Math.floor(side) + "px");
+}
+
 /**
  * Calculate the minimum width of a number of squares in a rectangle for use the maximum space
  * @param {number} w Width of the rectangle
