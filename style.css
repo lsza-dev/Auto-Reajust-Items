@@ -1,0 +1,37 @@
+html, body {
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+}
+.container {
+    height:100%;
+    overflow: auto;
+}
+.flex-div{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height:100%;
+    background:lightgreen;
+    overflow: auto;
+}
+.flex-item {
+    aspect-ratio: 1;
+    background:lightblue;
+    box-shadow: 0 0 0 1px tomato inset;
+}
+.flex-item:after {
+    content:"";
+    display:block;
+    width: calc(100% - 2em);
+    aspect-ratio: 1;
+    margin: 1em;
+    border-radius:100%;
+    box-shadow: 0 0 0 20px tomato inset;
+}
